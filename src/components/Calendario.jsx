@@ -5,7 +5,7 @@ export const Calendario = () => {
   return (
     <div className="max-w-screen-lg mx-6 bg-violet-blue  rounded-3xl px-4 py-8">
         <div className='flex justify-center'>
-            <strong className=" flex items-center gap-2 text-white font-nunito font-bold text-xl mb-2">Octubre 2023<img src={flechaabajo2} className='w-3 h-2' /></strong>
+            <button><strong className=" flex items-center gap-2 text-white font-nunito font-bold text-xl mb-2">Octubre 2023<img src={flechaabajo2} className='w-3 h-2' /></strong></button>
         </div>
         <hr/>
         <br />

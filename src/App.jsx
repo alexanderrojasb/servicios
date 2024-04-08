@@ -19,7 +19,8 @@ function App() {
           <div>
             <Bloque1/>
           </div>
-          <div>
+          <div className='flex'>
+            <Etiqueta2/>
             <Bloque2/>
           </div>  
         </div>

@@ -11,7 +11,6 @@ export const Bloque2 = () => {
     <ContenedorBloque2>
       <HeaderBloque2/>
       <Calendario/>
-      <Etiqueta2/>
       <hr className='mx-6'/>
       <strong className='text-lg mx-6 text-purple-dark'>Estadísticas generales</strong>
       <Estadisticas/>
