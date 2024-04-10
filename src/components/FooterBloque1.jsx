@@ -3,7 +3,7 @@ import mas from '../img/mas.png'
 import flecha from '../img/flecha.png'
 import flechaabajo from '../img/flechaabajo.png'
 
-export const FooterBloque1 = () => {
+export const FooterBloque1 = ({showBloque2}) => {
 
   const [showDropdown, setShowDropdown] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -17,7 +17,7 @@ export const FooterBloque1 = () => {
   };
   
   return (
-    <div className='bg-white sm:mx-auto justify-between rounded-b-2xl w-574 py-3 gap-4 flex'>
+    <div className='bg-white mx-6 justify-between rounded-b-2xl py-3 gap-4 flex'>
        <div>
         <div className='flex justify-between gap-4'>
           <img src={flecha} className='w-7' alt="" />
@@ -41,6 +41,11 @@ export const FooterBloque1 = () => {
           <img src={mas} className='w-6' alt="mas" /> Registrar reserva externa
         </button>
       </div>
+      {!showBloque2 && (
+        <div>
+          <button className='rounded-xl items-center text-violet-blue flex py-3 px-4 shadow-button font-nunito text-lg'>Exportar reporte</button>
+        </div>
+      )}
       {showModal && (
         <div className={`fixed inset-0 z-50 overflow-auto bg-black bg-opacity-20 flex justify-center items-center transition-opacity duration-300 ${showModal ? 'opacity-100' : 'opacity-0'}`}>
           <div className="bg-white p-6 rounded-2xl">

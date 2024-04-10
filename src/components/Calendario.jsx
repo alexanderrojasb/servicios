@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import flechaabajo2 from '../img/flechaabajo2.png'
 
-export const Calendario = () => {
+export const Calendario = ({ actualizarDatoEstadisticas }) => {
+  const [clickCount, setClickCount] = useState(0);
+
+  const handleClick = () => {
+    if (clickCount === 1) {
+      window.location.reload();
+    } else {
+      setClickCount(clickCount + 1);
+      actualizarDatoEstadisticas('Estadísticas del día', '4','S/321', '2', '2', 'Servicios del día', 'Ingresos del día');
+    }
+  };
   return (
     <div className="max-w-screen-lg mx-6 bg-violet-blue  rounded-3xl px-4 py-8">
         <div className='flex justify-center'>
@@ -22,7 +32,7 @@ export const Calendario = () => {
             {[...Array(2)].map((_, index) => (
             <strong key={index} className="text-center text-white font-nunito">{index + 6}</strong>
             ))}
-            <strong className="text-center text-white font-nunito flex flex-col">8<p>•</p></strong>
+            <button className=' cursor-pointer focus:bg-orange-500 rounded-2xl'><strong className="text-center text-white font-nunito flex flex-col" onClick={handleClick}>8<p>•</p></strong></button>
             <strong className="text-center text-white font-nunito">9</strong>
             <strong className="text-center text-white font-nunito flex flex-col">10<p>•</p></strong>
             <strong className="text-center text-white font-nunito">11</strong>
